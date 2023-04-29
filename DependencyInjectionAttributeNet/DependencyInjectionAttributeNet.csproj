@@ -4,10 +4,25 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+     <Authors>davil74</Authors>
+    <Product>DependencyInjectionAttributeNet</Product>
+    <Copyright>Copyright © davil74 2023</Copyright>
+    <PackageProjectUrl>https://github.com/davil74/DependencyInjectionAttributeNet</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType> 
+    <RepositoryUrl>https://github.com/davil74/DependencyInjectionAttributeNet</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Use the attribute to register the service in the IServiceCollection</Description>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+    <ItemGroup>
+    <None Include="images\icon.png" Pack="true" PackagePath="" />
+    <None Include="../README.md" Pack="true" PackagePath="\" />
 
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
+

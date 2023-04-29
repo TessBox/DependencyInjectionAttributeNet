@@ -34,12 +34,12 @@ public static class ServiceCollectionExtensions
             // singleton
             if (service.Attribute.Lifetime == Lifetime.Singleton)
             {
-                services.AddSingleton(service.Attribute.ServiceType, service.ImplementationType);
+                services.AddSingleton(service.Attribute.InterfaceType, service.ImplementationType);
                 continue;
             }
 
             // transient
-            services.AddTransient(service.Attribute.ServiceType, service.ImplementationType);
+            services.AddTransient(service.Attribute.InterfaceType, service.ImplementationType);
         }
     }
 

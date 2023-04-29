@@ -1,16 +1,26 @@
 ﻿namespace DependencyInjectionAttributeNet;
 
+/// <summary>
+/// Attribute to define the interface and the Lifetime of the service
+/// </summary>
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]
 public class ServiceAttribute : Attribute
 {
-    public ServiceAttribute(Type serviceType, Lifetime lifetime)
+    public ServiceAttribute(Type interfaceType, Lifetime lifetime)
     {
-        ServiceType = serviceType;
+        InterfaceType = interfaceType;
         Lifetime = lifetime;
     }
 
-    public Type ServiceType { get; }
+    /// <summary>
+    /// Type of the interface for this service
+    /// </summary>
+    public Type InterfaceType { get; }
 
+    /// <summary>
+    /// Lifetime
+    /// </summary>
+    /// <value></value>
     public Lifetime Lifetime { get; }
 }
 
